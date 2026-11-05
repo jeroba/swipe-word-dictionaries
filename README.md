@@ -10,7 +10,7 @@ ship inside Tappller's word puzzle game for iOS, as the MPL 2.0 requires.
 | `es/es-expandido-original.txt` | Every word form of RLA-ES 2.9 (level 5), expanded from `es.dic` + `es.aff` with `tools/hunspell_expand.py`: lower case, NFC, letters only, one per line, sorted by UTF-8 bytes. |
 | `es/words.txt` | The game dictionary: the forms above normalized to upper case without accents (Ñ is kept as its own letter), 3 to 12 letters, minus a list of offensive words. Sorted by bytes. |
 | `es/sensitive.txt` | Words from `words.txt` that the game accepts but never shows by name. |
-| `es/words.bin` | `words.txt` in the SWD1 binary format: a 16-byte header (`SWD1`, version, count), `UInt32` offsets (`count + 1`, little endian) and the words concatenated in the same order. |
+| `es/words.bin` | `words.txt` in the SWD1 binary format, little endian: `"SWD1"`, `UInt32` version (1), `UInt32` count, `UInt32` blob size, then `UInt32 offsets[count + 1]` and the UTF-8 words concatenated in the same order, without separators. |
 | `tools/hunspell_expand.py` | The expander used to produce `es-expandido-original.txt` (`python3 -I hunspell_expand.py es.aff es.dic out_dir originals.txt`). |
 | `LICENSE`, `NOTICE` | MPL 2.0 text and the notice that ships with the files. |
 
