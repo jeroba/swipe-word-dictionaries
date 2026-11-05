@@ -1,0 +1,3 @@
+This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+words.txt, words.bin and sensitive.txt are derived from the RLA-ES Hunspell dictionary v2.9 (Santiago Bosio and contributors, https://github.com/sbosio/rla-es), used under MPL 2.0 and modified: expanded to all word forms, normalized to upper case without accents (Ñ kept), filtered to 3-12 letters and with a list of offensive words removed. words.bin is the same list in the SWD1 binary format.
